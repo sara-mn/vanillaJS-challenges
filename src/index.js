@@ -1,5 +1,5 @@
-import {router} from './router.js';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import {router} from './router'
+import 'bootstrap/dist/css/bootstrap.css';
 
 window.addEventListener('hashchange', router);
 window.addEventListener('load', router);

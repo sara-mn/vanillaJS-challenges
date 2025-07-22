@@ -1,35 +1,12 @@
-// import home from './views/home.js';
-// import challenge1 from './views/challenge1.js';
-// import challenge2 from './views/challenge2.js';
-
-// const routes = {
-//   '/': home,
-//   '/challenge/1/drum-kit': challenge1,
-//   '/challenge/2/clock': challenge2,
-//   //
-// };
-//
-// export function router() {
-//   const path = location.hash.slice(1) || '/';
-//   const view = routes[path];
-//
-//   const app = document.getElementById('app');
-//   app.innerHTML = '';
-//
-//   if (view) {
-//     app.appendChild(view());
-//   } else {
-//     app.innerHTML = '<h2>404 Not Found</h2>';
-//   }
-// }
 
 const routes = {
-  '/': 'views/home',
-  '/challenge/1': 'views/challenge1',
-  // ...
+  '/': './views/home',
+  '/challenge/1/drum-kit': './views/challenge1',
+  '/challenge/2/clock': './views/challenge2',
+  //
 };
 
-export async function router() {
+export function router() {
   const path = location.hash.slice(1) || '/';
   const viewPath = routes[path];
 
@@ -43,22 +20,23 @@ export async function router() {
 
   try {
     // Load HTML
-    const html = await fetch(`${viewPath}/index.html`).then(res => res.text());
-    app.innerHTML = html;
+    fetch(`${viewPath}/index.html`).then(res => res.text()).then((html) => {
+      app.innerHTML = html;
 
-    // Load CSS
-    const cssPath = `${viewPath}/style.css`;
-    const styleEl = document.createElement('link');
-    styleEl.rel = 'stylesheet';
-    styleEl.href = cssPath;
-    document.head.appendChild(styleEl);
+      // Load CSS
+      const cssPath = `${viewPath}/style.css`;
+      const styleEl = document.createElement('link');
+      styleEl.rel = 'stylesheet';
+      styleEl.href = cssPath;
+      document.head.appendChild(styleEl);
 
-    // Load JS
-    const scriptPath = `${viewPath}/script.js`;
-    const scriptEl = document.createElement('script');
-    scriptEl.src = scriptPath;
-    scriptEl.type = 'module';
-    document.body.appendChild(scriptEl);
+      // Load JS
+      const scriptPath = `${viewPath}/script.js`;
+      const scriptEl = document.createElement('script');
+      scriptEl.src = scriptPath;
+      scriptEl.type = 'module';
+      document.body.appendChild(scriptEl);
+    });
 
   } catch (err) {
     console.error('Error loading view:', err);
