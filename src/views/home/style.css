@@ -1,0 +1,10 @@
+.main{
+  min-height: 100vh;
+}
+
+.right-main-col {
+  min-height: 500px;
+  height: 55vh;
+  background: #040344;
+  background: linear-gradient(11deg, rgba(4, 3, 68, 1) 0%, rgba(210, 100, 227, 1) 77%);
+}
