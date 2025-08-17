@@ -1,59 +1,48 @@
-// document.querySelectorAll("button").forEach((btn) => {
-//   btn.addEventListener("click", () => {
-//     // pause any currently playing song
-//     if (window.currentSong) {
-//       window.currentSong.pause();
-//       window.currentSong.currentTime = 0;
-//     }
-//
-//     const song = btn.querySelector("audio");
-//     if (song) {
-//       song.play();
-//       window.currentSong = song; // keep track of playing song
-//     }
-//   });
-// });
-//
-// // Keyboard support: press a key matching button's id
-// document.addEventListener("keydown", (event) => {
-//   const playBtn = document.getElementById(event.key);
-//   if (playBtn) {
-//     playBtn.click(); // trigger the button click
-//   }
-// });
-// let song;
-// let playBtn;
-//
-// playBtn?.addEventListener("click", () => {
-//   song?.play(); // Play the song
-// });
-//
-// document.addEventListener("keydown", function (event) {
-//
-//   // song?.pause();
-//   playBtn = document.getElementById(event.key);
-//
-//
-//   if (playBtn) {
-//     // song?.pause();
-//     song = playBtn.querySelector('audio');
-//     playBtn.click();
-//   }
-//
-// });
+document.querySelectorAll(".qube").forEach((btn) => {
+  btn.addEventListener("click", () => {
 
-// document.addEventListener("click", function (event) {
-//
-//   song?.pause();
-//   let playBtn = document.getElementById(event.key);
-//
-//
-//   if (playBtn) {
-//     song.pause();
-//     song = playBtn.querySelector('audio');
-//     playBtn.click();
-//   }
-//   playBtn.addEventListener("click", () => {
-//     song.play(); // Play the song
-//   });
-// });
+    if (window.currentSong) {
+      window.currentSong.pause();
+      window.currentSong.currentTime = 0;
+    }
+
+    const song = btn.querySelector("audio");
+    if (song) {
+      song.play().then();
+      window.currentSong = song;
+    }
+  });
+
+  btn.addEventListener("mousedown", (event) => {
+    btn.firstElementChild.classList.add("focused");
+  });
+
+  btn.addEventListener("mouseup", (event) => {
+    btn.firstElementChild.classList.remove("focused");
+  });
+
+  btn.addEventListener("mouseleave", (event) => {
+    btn.firstElementChild.classList.remove("focused");
+  });
+
+});
+
+let playBtn;
+
+document.addEventListener("keydown", (event) => {
+  playBtn = document.getElementById(event.key);
+  if (playBtn) {
+    playBtn.classList.add("focused");
+  }
+});
+
+document.addEventListener("keyup", (event) => {
+  playBtn = document.getElementById(event.key);
+  if (playBtn) {
+    playBtn.click();
+    playBtn.classList.remove("focused");
+  }
+});
+
+
+

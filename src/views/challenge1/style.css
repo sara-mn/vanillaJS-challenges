@@ -1,3 +1,7 @@
+.menu_absolute{
+  position: absolute;
+}
+
 .main-bg {
   background-image: url("/img/pexels-ingo-109629.jpg");
   background-repeat: no-repeat;
@@ -15,7 +19,7 @@
   background: rgba(0, 0, 0, 0.52);
 }
 
-.main-bg .qube:hover {
+.main-bg .qube:hover{
   border: 2px solid greenyellow;
   box-shadow: 0px 0px 5px 2px rgba(173, 255, 47, 1);
   -webkit-box-shadow: 0px 0px 5px 2px rgba(173, 255, 47, 1);
@@ -23,9 +27,48 @@
   transition: all 0.3s ease-out;
 }
 
+.qube:has(.focused) {
+  transition: all 0.1s ease-out;
+  animation-name: click1;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+.focused{
+  transition: all 0.1s ease-out;
+  animation-name: click2;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+@keyframes click1 {
+  0% {
+    border-color: black;
+    box-shadow: unset;
+  }
+  100% {
+    border-color: greenyellow;
+    box-shadow: 0px 0px 5px 2px rgba(173, 255, 47, 1);
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(173, 255, 47, 1);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(173, 255, 47, 1);
+  }
+}
+
+@keyframes click2 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
 .main-bg .qube b {
   color: white;
-  /*font-family: "Bookman Old Style";*/
   font-size: 20px;
 }
 
