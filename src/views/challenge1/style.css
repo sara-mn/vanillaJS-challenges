@@ -1,0 +1,36 @@
+.main-bg {
+  background-image: url("/img/pexels-ingo-109629.jpg");
+  background-repeat: no-repeat;
+  background-color: #555555;
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: luminosity;
+}
+
+.main-bg .qube {
+  width: 100px;
+  height: 80px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.52);
+}
+
+.main-bg .qube:hover {
+  border: 2px solid greenyellow;
+  box-shadow: 0px 0px 5px 2px rgba(173, 255, 47, 1);
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(173, 255, 47, 1);
+  -moz-box-shadow: 0px 0px 5px 2px rgba(173, 255, 47, 1);
+  transition: all 0.3s ease-out;
+}
+
+.main-bg .qube b {
+  color: white;
+  /*font-family: "Bookman Old Style";*/
+  font-size: 20px;
+}
+
+.main-bg .qube span {
+  color: greenyellow;
+  font-size: 12px;
+  font-weight: bold;
+}
