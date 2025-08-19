@@ -1,10 +1,29 @@
 .main{
   min-height: 100vh;
+  background: url("/img/pexels-kaip-547494.jpg") #555555 center/cover fixed no-repeat ;
+  /*background-blend-mode: luminosity;*/
+}
+.challenge_card{
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+.challenge_card:hover{
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-out;
 }
 
-.right-main-col {
-  min-height: 500px;
-  height: 55vh;
-  background: #040344;
-  background: linear-gradient(11deg, rgba(4, 3, 68, 1) 0%, rgba(210, 100, 227, 1) 77%);
+.challenge_card:hover img{
+  transform: scale(1.02);
+  transition: all 0.3s ease-out;
+}
+
+.card-title{
+  height: 48px;
+}
+
+.disabled{
+  pointer-events: none;
+  cursor: default;
+  color: black;
+  opacity: 0.4;
 }
