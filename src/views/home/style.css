@@ -1,7 +1,7 @@
 .main{
   min-height: 100vh;
   background: url("/img/pexels-kaip-547494.jpg") #555555 center/cover fixed no-repeat ;
-  /*background-blend-mode: luminosity;*/
+  background-blend-mode: luminosity;
 }
 .challenge_card{
   overflow: hidden;
@@ -20,7 +20,9 @@
 .card-title{
   height: 48px;
 }
-
+.card-body {
+  background: #ededed;
+}
 .disabled{
   pointer-events: none;
   cursor: default;
