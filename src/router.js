@@ -2,6 +2,7 @@
 const routes = {
   '/': './views/home',
   '/challenge/1/drum-kit': './views/challenge1',
+  '/challenge/Optimized/1/drum-kit': './views/challenge1 - Optimized version with the help of GBT chat',
   '/challenge/2/clock': './views/challenge2',
   //
 };

@@ -1,0 +1,25 @@
+:root {
+  --primary: greenyellow;
+  --bg-dark: rgba(0, 0, 0, 0.52);
+}
+
+.main-bg {
+  background: url("/img/pexels-ingo-109629.jpg") #555555 center/cover no-repeat ;
+  background-blend-mode: luminosity;
+}
+
+.qube {
+  color: var(--primary);
+  border: 2px solid black;
+  border-radius: 8px;
+  background: var(--bg-dark);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.qube:hover,
+.qube.focused {
+  border-color: var(--primary);
+  box-shadow: 0px 0px 10px 3px var(--primary);
+  transform: scale(0.95);
+}
