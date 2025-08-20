@@ -47,12 +47,4 @@ module.exports = {
       },
     ],
   },
-  devServer: {
-    static: './dist',
-    historyApiFallback: true, // اگر Routing داری
-    open: true,
-    hot: true,
-    static: './dist',
-    historyApiFallback: true,
-  },
 };
