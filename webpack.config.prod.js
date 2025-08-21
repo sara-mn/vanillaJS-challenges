@@ -1,6 +1,5 @@
 const {merge} = require('webpack-merge');
 const common = require('./webpack.common.js');
-const path = require("path");
 
 module.exports = merge(common, {
   mode: 'production',
@@ -12,6 +11,7 @@ module.exports = merge(common, {
   },
   devServer: {
     static: './dist',
+    historyApiFallback: true, // اگر Routing داری
     open: true,
     hot: true,
   },
