@@ -10,7 +10,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[contenthash].js',
-    // clean: true,
+    clean: true,
   },
   plugins: [
     new CleanWebpackPlugin(), // dist رو قبل از build پاک می‌کنه
