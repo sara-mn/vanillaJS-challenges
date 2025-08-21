@@ -7,11 +7,6 @@ module.exports = {
   entry: {
     app: './src/app.js',
   },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.[contenthash].js',
-    clean: true,
-  },
   plugins: [
     new CleanWebpackPlugin(), // dist رو قبل از build پاک می‌کنه
     new HtmlWebpackPlugin({
