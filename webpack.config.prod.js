@@ -1,5 +1,6 @@
 const {merge} = require('webpack-merge');
 const common = require('./webpack.common.js');
+const path = require("node:path");
 
 module.exports = merge(common, {
   mode: 'production',
@@ -7,7 +8,7 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[contenthash].js',
     clean: true,
-    publicPath: 'vanillaJS-challenges',
+    publicPath: '/vanillaJS-challenges/',
   },
   devServer: {
     static: './dist',
