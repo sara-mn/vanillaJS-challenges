@@ -1,6 +1,6 @@
 .main{
   min-height: 100vh;
-  background: url("/src/assets/img/pexels-kaip-547494.jpg") #555555 center/cover fixed no-repeat ;
+  background: url("/img/pexels-kaip-547494.jpg") #555555 center/cover fixed no-repeat ;
   background-blend-mode: luminosity;
 }
 .challenge_card{

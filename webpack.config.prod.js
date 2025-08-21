@@ -4,7 +4,10 @@ const common = require('./webpack.common.js');
 module.exports = merge(common, {
   mode: 'production',
   output: {
-    publicPath: '/vanillaJS-challenges/', // برای GitHub Pages مهمه
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.[contenthash].js',
+    clean: true,
+    publicPath: 'vanillaJS-challenges',
   },
   devServer: {
     static: './dist',
