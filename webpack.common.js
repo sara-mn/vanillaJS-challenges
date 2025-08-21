@@ -28,6 +28,7 @@ module.exports = {
         {from: '404.html', to: '404.html'},
         {from: 'src/assets/img', to: 'img'},
         {from: 'src/assets/css', to: 'css'},
+        {from: 'src/assets/sounds', to: 'sounds'},
         {from: 'src/assets/icon.svg', to: 'icon.svg'},
         {from: 'src/assets/robots.txt', to: 'robots.txt'},
         {from: 'src/assets/icon.png', to: 'icon.png'},
