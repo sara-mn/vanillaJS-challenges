@@ -1,0 +1,53 @@
+:root {
+  --primary: greenyellow;
+  --bg-dark: rgba(0, 0, 0, 0.52);
+}
+
+.main-bg {
+  background: url("../../img/sky-bg.jpg") #555555 center/cover no-repeat;
+}
+
+.main-bg-filter {
+  background-blend-mode: difference;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+}
+
+.clock .center-point {
+  position: absolute;
+  top:50%;
+  right: 50%;
+  transform: translate(10px ,-10px);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: greenyellow;
+}
+
+.clock .hand {
+  position: absolute;
+  width: 0;
+  left: 50%;
+  bottom: 50%;
+  background: #555555;
+  border-right: 5px solid black;
+  border-radius: 5px;
+  transform-origin: bottom center;
+  transition: all ease-in-out 100ms;
+}
+
+.clock .hand-hour {
+  height: 80px;
+}
+
+.clock .hand-minute {
+  height: 110px;
+}
+
+.clock .hand-second {
+  height: 135px;
+  border-color: darkred;
+}
