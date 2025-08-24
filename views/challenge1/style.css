@@ -8,6 +8,9 @@
   background-color: #555555;
   background-position: center center;
   background-size: cover;
+}
+
+.main-bg-filter {
   background-blend-mode: luminosity;
 }
 

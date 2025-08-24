@@ -4,7 +4,10 @@
 }
 
 .main-bg {
-  background: url("src/assets/img/pexels-ingo-109629.jpg") #555555 center/cover no-repeat;
+  background: url("../../img/pexels-ingo-109629.jpg") #555555 center/cover no-repeat;
+}
+
+.main-bg-filter {
   background-blend-mode: luminosity;
 }
 
