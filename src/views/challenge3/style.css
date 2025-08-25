@@ -1,0 +1,37 @@
+:root {
+  --primary: greenyellow;
+  --bg-dark: rgba(0, 0, 0, 0.52);
+}
+
+.main-bg {
+  background: url("../../img/challenge3-bg.jpg") #969696 50% 50%/contain no-repeat;
+  background-size: max(40%);
+}
+
+.main-bg-filter {
+  background-blend-mode: difference;
+}
+
+.setting {
+  font-size: 20px;
+  width: 350px;
+  position: absolute;
+  top: 300px;
+  color: white;
+}
+
+
+.setting input{
+  width: 150px;
+}
+
+.setting input#colorInput{
+  width: 50px;
+}
+
+.play {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(255 255 255 / 5%);;
+  backdrop-filter: blur(0px);
+}
