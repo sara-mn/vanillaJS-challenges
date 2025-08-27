@@ -5,6 +5,7 @@ const routes = {
   '/challenge/Optimized/1/drum-kit': './views/challenge1 - Optimized version with the help of GBT chat',
   '/challenge/2/clock': './views/challenge2',
   '/challenge/3/playing-with-CSS-Variables': './views/challenge3',
+  '/challenge/4/Array-Cardio-Day-1': './views/challenge4',
   //
 };
 
