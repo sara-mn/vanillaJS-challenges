@@ -49,11 +49,12 @@ function play() {
     "Noah, Henderson",
     "Zoe, Coleman"
   ];
-
+  const data = ['car','motor','truck','bus','car','car','car','motor','truck','bus','truck','truck','truck','motor','truck',]
+  const inventorsWithYearsLived = [];
   //***  Create Main Table
   createRows(inventors);
 
-//***  Show Complete Table
+  //***  Show Complete Table
   showCompleteTable(inventors);
 
   //***  filter Inventors Born 1500s
@@ -62,9 +63,20 @@ function play() {
   //***  Map Inventors First & Last
   mapInventorsFirstLast(inventors);
 
-
   //***  Sort Inventors Oldest To Youngest
   sortInventorsOldestToYoungest(inventors);
+
+  //***  How Many Years did Inventors Live?
+  howManyYearsInventorsLive(inventors);
+
+  //***  Sort Inventors By Years Lived
+  sortInventorsByYearsLived(inventors);
+
+  //***  Sort Inventors By Years Lived
+  sortPeopleAlphabeticallyByLast(people);
+
+  //***  Sort Inventors By Years Lived
+  sumOfInstanceEachItem(data);
 
 }
 
@@ -115,7 +127,64 @@ function mapInventorsFirstLast(inventors) {
 function sortInventorsOldestToYoungest(inventors) {
   const sortInventorsOldestToYoungest = document.getElementById("sortInventorsOldestToYoungest");
   sortInventorsOldestToYoungest.addEventListener('click', (event) => {
-    const sortedItems = inventors.sort((a,b) => (a.year - b.year));
+    const sortedItems = inventors.sort((a, b) => (a.year - b.year));
     console.table(sortedItems);
+  })
+}
+
+function howManyYearsInventorsLive(inventors) {
+  const howManyYearsInventorsLive = document.getElementById("howManyYearsInventorsLive");
+  howManyYearsInventorsLive.addEventListener('click', (event) => {
+    if (!inventors[0].hasOwnProperty("lived"))
+      inventors = inventors.map((i) => ({
+        ...i,
+        lived: i.passed - i.year
+      }))
+    console.table(inventors);
+    const YearsAllInventorsLived = inventors.reduce((total, current) => {
+      return total + current.lived
+    }, 0);
+    console.log('YearsAllInventorsLived: ' + YearsAllInventorsLived);
+  })
+}
+
+function sortInventorsByYearsLived(inventors) {
+  const sortInventorsByYearsLived = document.getElementById("sortInventorsByYearsLived");
+  sortInventorsByYearsLived.addEventListener('click', (event) => {
+    if (!inventors[0].hasOwnProperty("lived"))
+      inventors = inventors.map((i) => ({
+        ...i,
+        lived: i.passed - i.year
+      }))
+    const sortedByLivedItems = inventors.sort((a, b) => (a.lived - b.lived));
+    console.table(sortedByLivedItems);
+  })
+}
+
+function sortPeopleAlphabeticallyByLast(people) {
+  const sortPeopleAlphabeticallyByLast = document.getElementById("sortPeopleAlphabeticallyByLast");
+  sortPeopleAlphabeticallyByLast.addEventListener('click', (event) => {
+    const sortedPeople = people.sort((a, b) => {
+      if (b.split(', ')[1] < a.split(', ')[1])
+        return 1
+      else {
+        return -1
+      }
+    })
+    console.table(sortedPeople);
+  })
+}
+
+function sumOfInstanceEachItem(data) {
+  const sumOfInstanceEachItem = document.getElementById("sumOfInstanceEachItem");
+  sumOfInstanceEachItem.addEventListener('click', (event) => {
+    const items = data.reduce((sum, current) => {
+      if (sum.hasOwnProperty(current)) {
+        sum[current] += 1;
+      } else
+        sum[current] = 1;
+      return sum
+    }, {})
+    console.log(items);
   })
 }
