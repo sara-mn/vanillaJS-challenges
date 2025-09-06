@@ -1,0 +1,89 @@
+:root {
+  --primary: greenyellow;
+  --bg-dark: rgba(0, 0, 0, 0.52);
+}
+
+.main-bg {
+  background: #969696;
+}
+
+.main-bg-filter {
+  background-blend-mode: difference;
+}
+
+.gallery {
+  font-size: 20px;
+  width: 900px;
+  height: 699px;
+  overflow: hidden;
+}
+
+.item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  transition: flex 0.3s ease-out, background 0.3s ease-out, font-size 0.3s ease-out;
+}
+
+.item > * {
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-out;
+  background-size: cover;
+  background-position: center;
+  flex: 1 0 auto;
+}
+
+.item > p {
+  font-family: cursive;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 1.1em;
+}
+
+.item > :first-child {
+  transform: translateY(-150%);
+}
+
+.item > :last-child {
+  transform: translateY(150%);
+}
+
+#item1 {
+  background: url("../../img/gallery-1.jpg") deepskyblue;
+}
+
+#item2 {
+  background: url("../../img/gallery-2.jpg") greenyellow ;
+}
+
+#item3 {
+  background: url("../../img/gallery-3.jpg") orange ;
+}
+
+#item4 {
+  background: url("../../img/gallery-4.jpg") red ;
+}
+
+#item5 {
+  background: url("../../img/gallery-5.jpg") hotpink ;
+}
+
+.open {
+  flex: 4;
+  font-size: 1.5em;
+}
+
+.active-panel > :first-child {
+  transform: translateY(100%);
+}
+
+.active-panel > :last-child {
+  transform: translateY(-100%);
+}

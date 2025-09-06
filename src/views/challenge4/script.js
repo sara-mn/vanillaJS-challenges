@@ -1,5 +1,5 @@
 window.addEventListener("hashchange", () => {
-  if (location.hash === "#/challenge/4/Array-Cardio-Day-1") {
+  if (location.hash === "#/challenge/4/array-cardio-day-1") {
     setTimeout(play, 50);
   }
 });

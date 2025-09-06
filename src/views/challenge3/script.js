@@ -1,5 +1,5 @@
 window.addEventListener("hashchange", () => {
-  if (location.hash === "#/challenge/3/playing-with-CSS-Variables") {
+  if (location.hash === "#/challenge/3/playing-with-CSS-variables") {
     setTimeout(play, 50);
   }
 });

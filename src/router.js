@@ -2,10 +2,11 @@
 const routes = {
   '/': './views/home',
   '/challenge/1/drum-kit': './views/challenge1',
-  '/challenge/Optimized/1/drum-kit': './views/challenge1 - Optimized version with the help of GBT chat',
+  '/challenge/optimized/1/drum-kit': './views/challenge1 - Optimized version with the help of GBT chat',
   '/challenge/2/clock': './views/challenge2',
-  '/challenge/3/playing-with-CSS-Variables': './views/challenge3',
-  '/challenge/4/Array-Cardio-Day-1': './views/challenge4',
+  '/challenge/3/playing-with-CSS-variables': './views/challenge3',
+  '/challenge/4/array-cardio-day-1': './views/challenge4',
+  '/challenge/5/flex_panels_image_gallery': './views/challenge5',
   //
 };
 
