@@ -4,7 +4,7 @@
 }
 
 .main-bg {
-  background: #969696;
+  background: #a8afe7;
 }
 
 .main-bg-filter {
@@ -48,11 +48,11 @@
 }
 
 .item > :first-child {
-  transform: translateY(-150%);
+  transform: translateY(-100%);
 }
 
 .item > :last-child {
-  transform: translateY(150%);
+  transform: translateY(100%);
 }
 
 #item1 {
@@ -81,9 +81,9 @@
 }
 
 .active-panel > :first-child {
-  transform: translateY(100%);
+  transform: translateY(0%);
 }
 
 .active-panel > :last-child {
-  transform: translateY(-100%);
+  transform: translateY(0%);
 }
