@@ -10,11 +10,6 @@ function play() {
   const items = document.querySelectorAll(".item");
   items.forEach(panel => {
     panel.addEventListener("click", (e) => {
-      // const openItem = items.find(item => item.propertyName.includes("flex"));
-      //   if(openItem){
-      //     openItem.classList.toggle("open");
-      //     openItem.classList.toggle("active-panel")
-      //   }
       panel.classList.toggle("open");
     })
 
@@ -22,7 +17,13 @@ function play() {
   items.forEach(panel => {
     panel.addEventListener("transitionend", (e) => {
       if (e.propertyName.includes("flex")) {
-        panel.classList.toggle("active-panel")
+        const flexGrowValue = getComputedStyle(panel).flexGrow;
+        if (flexGrowValue === "4") {
+          panel.classList.add("active-panel");
+        }
+        else
+          panel.classList.remove("active-panel");
+
       }
     })
 
