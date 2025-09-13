@@ -7,6 +7,7 @@ const routes = {
   '/challenge/3/playing-with-CSS-variables': './views/challenge3',
   '/challenge/4/array-cardio-day-1': './views/challenge4',
   '/challenge/5/flex_panels_image_gallery': './views/challenge5',
+  '/challenge/6/ajax_type_ahead': './views/challenge6',
   //
 };
 
