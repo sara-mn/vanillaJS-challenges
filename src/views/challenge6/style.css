@@ -4,86 +4,48 @@
 }
 
 .main-bg {
-  background: #a8afe7;
+  background: #e9b004;
 }
 
 .main-bg-filter {
-  background-blend-mode: difference;
+  background-blend-mode: unset;
 }
 
-.gallery {
-  font-size: 20px;
-  width: 900px;
-  height: 699px;
-  overflow: hidden;
+#searchBtn{
+  width: 400px;
+  outline: none;
+  background: white;
+  height: 50px;
+}
+#searchBtn:focus {
+  color: var(--bs-body-color);
+  border-color: white;
+  outline: 0;
+  box-shadow: none;
 }
 
-.item {
+ul#result {
+  margin-top:-2px;
+}
+
+li{
+  height: 50px;
+  width: 320px;
+  list-style: none;
+  padding: 5px 20px;
   display: flex;
-  flex: 1;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  color: white;
-  transition: flex 0.3s ease-out, background 0.3s ease-out, font-size 0.3s ease-out;
+  background: white;
 }
 
-.item > * {
-  text-align: center;
-  margin: 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease-out;
-  background-size: cover;
-  background-position: center;
-  flex: 1 0 auto;
+li:nth-child(odd) {
+ transform: perspective(15px) rotateX(-1deg);
+  margin-top:3px;
+  box-shadow: 0 10px 40px -18px rgba(0, 0, 0, 0.3) inset;
 }
 
-.item > p {
-  font-family: cursive;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-  font-size: 1.1em;
-}
-
-.item > :first-child {
-  transform: translateY(-100%);
-}
-
-.item > :last-child {
-  transform: translateY(100%);
-}
-
-#item1 {
-  background: url("../../img/gallery-1.jpg") deepskyblue;
-}
-
-#item2 {
-  background: url("../../img/gallery-2.jpg") greenyellow ;
-}
-
-#item3 {
-  background: url("../../img/gallery-3.jpg") orange ;
-}
-
-#item4 {
-  background: url("../../img/gallery-4.jpg") red ;
-}
-
-#item5 {
-  background: url("../../img/gallery-5.jpg") hotpink ;
-}
-
-.open {
-  flex: 4;
-  font-size: 1.5em;
-}
-
-.active-panel > :first-child {
-  transform: translateY(0%);
-}
-
-.active-panel > :last-child {
-  transform: translateY(0%);
+li:nth-child(even) {
+  transform: perspective(15px) rotateX(1deg);
+  box-shadow: 0 -10px 40px -18px rgba(0, 0, 0, 0.3) inset;
 }

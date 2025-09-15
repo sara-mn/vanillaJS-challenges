@@ -19,7 +19,7 @@ async function fetchData() {
       if (filteredList.length > 0)
         filteredList.forEach(c => {
           const li = document.createElement("li");
-          li.innerText = c['city']?.toString()
+          li.innerHTML = `${c['city']}, ${c['state']}`
           resultEl.appendChild(li);
         })
       else {
